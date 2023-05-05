@@ -1,0 +1,354 @@
+
+@font-face {
+    font-family: 'ClashDisplay-Variable';
+    src: url(../../assets/fonts/ClashDisplay-Variable.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url(../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+:root{
+    --primary: #9FE870;
+    --green: #17fc44;
+    --s-black: #1E1C1C;
+    --high-silver: #D7D7D7;
+    --low-silver: #D9D9D9;
+}
+*{
+    transition: .1s;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 600px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    /* height: 122vh; */
+    height: 990px;
+}
+
+nav {
+    font-size: 15px;
+}
+
+section{
+
+}
+
+.back-to{
+    top: calc(100vh - 120px);
+    right: 60px;
+    left: auto;
+    transform: rotate(-90deg);
+}
+
+.cards{
+    /* margin-top: 100%; */
+    /* margin-bottom: 0%; */
+    /* transform: translateY(-50%); */
+}
+
+.cards > img{
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    animation-duration: 1.7s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.cards > .img1{
+    transform: scale(0.7) translate(-460px, 150%) rotate(-190deg);
+    animation-name: card1;
+}
+
+.cards > .img2{
+    transform: scale(0.7) translate(20px, 150%) rotate(-77deg);
+    animation-name: card2;
+}
+
+.cards > .img3{
+    transform: scale(0.7) translate(260px, 150%) rotate(-55deg);
+    animation-name: card3;
+}
+
+
+@keyframes card1{
+    from{
+        transform: scale(0.8) translate(-460px, 150%) rotate(-190deg);
+    }
+    to{
+        transform: scale(0.8) translate(-260px, 110px) rotate(-110deg);
+    }
+}
+
+@keyframes card2{
+    from{
+        transform: scale(0.8) translate(-100px, 150%) rotate(-47deg);
+    }
+    to{
+        transform: scale(0.8) translate(20px, -140px) rotate(-90deg);
+    }
+}
+
+@keyframes card3{
+    from{
+        transform: scale(0.8) translate(260px, 150%) rotate(-55deg);
+    }
+    to{
+        transform: scale(0.8) translate(260px, 180px) rotate(-75deg);
+    }
+}
+
+.curve{
+    width: 100%;
+    top: auto;
+    bottom: 0px;
+}
+
+.curve > div{
+    /* height: 220px; */
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.curve > .center{
+    width: 200px;
+    height: 165px;
+    box-shadow: 0 95px 0 10px white;
+}
+
+.curve > .center > .content{
+    transform: translate(10px, 200px) rotate(60deg);
+    animation: 1s go-up forwards;
+    animation-delay: 0.7s;
+}
+
+.curve > .center > .content > *{
+    position: absolute;
+}
+
+.curve > .center > .content > img {
+    transform: translateX(4px);
+}
+
+.curve > .center > .content > span{
+    height: 65px;
+    transform-origin: 50% 100%;
+    transform: translate(0px, -50%) rotate(calc(var(--index) * 12deg));
+}
+
+@keyframes go-up {
+    from{
+        transform: translate(10px, 200px) rotate(60deg);
+    }
+    to{
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+.curve > .left{
+    width: calc(50% - 70px);
+}
+
+.curve > .left > div{
+    width: 100%;
+    height: 50%;
+}
+
+.curve > .left .child1{
+    width: 70px;
+    height: 70px;
+    transform: translateY(10px);
+    border-radius: 0 0 0 40px;
+    box-shadow: -20px 20px 0px white;
+}
+
+.curve > .left .child2{
+    height: calc(50% + 10px);
+    margin-top: auto;
+    border-radius: 0px 160px 0 0;
+    /* box-shadow: 30px 0 0 white; */
+    box-shadow: 30px 0 0 white, 29px 0px 16px 1px #0000003b;
+}
+
+.curve > .right{
+    width: calc(50% - 70px);
+}
+
+.curve > .right > div{
+    width: 100%;
+    height: 50%;
+    margin-top: auto;
+}
+
+.curve > .right .child1{
+    width: 70px;
+    height: 70px;
+    transform: translateY(6px);
+    margin-left: calc(100% - 70px);
+    border-radius: 0 0 40px 0;
+    box-shadow: 20px 20px 0px white;
+}
+
+.curve > .right .child2{
+    height: calc(50% + 10px);
+    border-radius: 160px 0 0 0;
+    /* box-shadow: -30px 0 0 white; */
+    box-shadow: -30px 0 0 white, 29px 0px 16px 1px #0000003b;
+}
+
+.cards4{
+    
+}
+
+.cards4 > div {
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.cards4 > div > *{
+    transition: .3s;
+}
+
+.cards4:hover > div > div {
+    width: 220px;
+    height: 210px;
+}
+
+.cards4 > div > div > div{
+    transition: 0.7s;
+}
+
+.cards4:hover > div:first-child > div:last-child{
+    width: 310px;
+    height: 300px;
+}
+
+.cards4:hover > div:first-child > div:last-child{
+    background-color: var(--s-black);
+    color: white;
+}
+
+.cards4:hover > div > div > div{
+    transform: scale(0.93);
+}
+
+.cards4:hover > div:first-child > div:last-child > div{
+    transform: scale(1.25);
+}
+
+.cards4 > div:first-child >.carreau:first-child{
+    /* margin-top: 40px; */
+}
+
+.cards4 > div > .carreau{
+    transition: .5s;
+}
+
+div:hover > div > div > div > [hover='primary']{
+    color: var(--primary);
+}
+
+
+
+/* APPARITIONS */
+
+
+.apparition-box{
+    overflow: hidden;
+}
+
+.apparition-box > .go-down{
+    transform: translateY(-150%);
+    animation-name: box-slide-from-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.apparition-box > .go-up{
+    transform: translateY(150%);
+    animation-name: box-slide-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.apparition-box > .go-right{
+    transform: translateX(-150%);
+    animation-name: box-slide-from-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.apparition-box > .go-left{
+    transform: translateX(150%);
+    animation-name: box-slide-from-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes box-slide-from-top {
+    from{
+        transform: translateY(-150%);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+@keyframes box-slide-from-bottom {
+    from{
+        transform: translateY(150%);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+@keyframes box-slide-from-left {
+    from{
+        transform: translateX(-150%);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+@keyframes box-slide-from-right {
+    from{
+        transform: translateX(150%);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+/* APPARITIONS */
+
+
+
+
+
+
